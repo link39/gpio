@@ -1,10 +1,9 @@
 module.exports = function(sails) {
 	
-	const install = require('./install.js');
-	const setup = require('./setup.js');
+	const install = require('./lib/install.js');
+	const setup = require('./lib/setup.js');
 	var getGpio = require('./lib/getGpio.js');
 	var setGpio = require('./lib/setGpio.js');
-	var readAllGpio = require('./lib/readAllGpio.js');
 	var exec = require('./lib/exec.js');
 	
 	return {
@@ -12,7 +11,6 @@ module.exports = function(sails) {
 		setup : setup,
 		getGpio: getGpio,
 		setGpio: setGpio,
-		readAllGpio: readAllGpio,
 		exec : exec
 	};
 	
