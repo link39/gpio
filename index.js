@@ -1,10 +1,13 @@
+const install = require('./lib/install.js');
+const setup = require('./lib/setup.js');
+var getGpio = require('./lib/getGpio.js');
+var setGpio = require('./lib/setGpio.js');
+var exec = require('./lib/exec.js');
+
 module.exports = function(sails) {
-	
-	const install = require('./lib/install.js');
-	const setup = require('./lib/setup.js');
-	var getGpio = require('./lib/getGpio.js');
-	var setGpio = require('./lib/setGpio.js');
-	var exec = require('./lib/exec.js');
+	/* gladys.on('ready', function() {
+    watchWithInterval();
+	}); */
 	
 	return {
 		install : install,
@@ -15,3 +18,10 @@ module.exports = function(sails) {
 	};
 	
 };
+
+/* function watchWithInterval() {
+  // Read devices every second
+  watch().finally(function() {
+    setTimeout(watchWithInterval, 2000);
+  });
+}  */
